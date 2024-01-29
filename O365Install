@@ -1,0 +1,17 @@
+class Office365 < Formula
+desc "Office suite from Microsoft - Subscription version"
+homepage "https://www.microsoft.com/en-us/microsoft-365"
+url "https://office365-download.pkg"
+version "latest"
+sha256 "checksum"
+
+depends_on macos: ">= :catalina"
+
+def install
+system "installer", "-pkg", "office365-download.pkg", "-target", "/"
+end
+
+test do
+# run test here
+end
+end
